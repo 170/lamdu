@@ -46,7 +46,7 @@ import qualified Language.ECMAScript3.PrettyPrint as JSPP
 import qualified Language.ECMAScript3.Syntax as JSS
 import qualified Language.ECMAScript3.Syntax.CodeGen as JS
 import           Language.ECMAScript3.Syntax.QuasiQuote (jsexpr)
-import qualified Text.PrettyPrint.Leijen as Pretty
+import qualified Text.PrettyPrint.Compact as Pretty
 
 import           Prelude.Compat
 
@@ -80,7 +80,7 @@ infixl 4 $.
 ($.) = JS.dot
 
 pp :: JSS.Statement () -> String
-pp = (`Pretty.displayS`"") . Pretty.renderPretty 1.0 90 . JSPP.prettyPrint
+pp = Pretty.render 1.0 90 . JSPP.prettyPrint
 
 logObj :: JSS.Expression ()
 logObj =

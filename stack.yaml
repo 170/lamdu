@@ -3,6 +3,9 @@ packages:
 - location:
     git: https://github.com/da-x/graphics-drawingcombinators
     commit: 2d8f9efb610dcf69c28ae9fbb8799565cef10612
+- location:
+    git: https://github.com/Peaker/language-ecmascript
+    commit: origin/pretty-compact
 
 resolver: nightly-2016-02-05
 extra-deps:
@@ -12,6 +15,7 @@ extra-deps:
 - bitmap-opengl-0.0.1.5
 - stb-image-0.2.1
 - text-1.2.2.0
+- pretty-compact-1.0
 
 extra-include-dirs:
 - /usr/local/include
